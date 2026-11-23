@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+/work/
+/src-tauri/target/
+
+# Large third-party Windows tools are fetched by scripts/prepare-windows-tools.ps1
+/src-tauri/tools/**/*.exe
+/src-tauri/tools/**/*.msi
+/src-tauri/tools/**/*.zip
+/src-tauri/tools/**/*.7z
+
+# Bun is the root package manager
+/package-lock.json
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Tauri keys
+*.key
+*.key.pub
+
+#skills
+.agents/*
+skills-lock.json
+
+#agents
+.mimocode

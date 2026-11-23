@@ -21,7 +21,7 @@
 [![Frontend](https://img.shields.io/badge/Frontend-React%2019%20%2F%20TypeScript-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Motion](https://img.shields.io/badge/Motion-Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 [![Audio](https://img.shields.io/badge/Audio-WASAPI%20Loopback-9333EA?style=for-the-badge&logo=applepodcasts&logoColor=white)](https://learn.microsoft.com/en-us/windows/win32/coreaudio/core-audio-apis-in-windows-vista)
-[![Release](https://img.shields.io/badge/Version-v0.1.0%20(Beta)-10B981?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lukog10/Orbix/releases/tag/v0.1.0)
+[![Windows Build](https://github.com/pardhusaipatchipulusu-sys/window-s-ui/actions/workflows/build-windows.yml/badge.svg)](https://github.com/pardhusaipatchipulusu-sys/window-s-ui/actions/workflows/build-windows.yml)
 [![License](https://img.shields.io/badge/License-GPL%20v3-F59E0B?style=for-the-badge)](LICENSE)
 
 <br />
@@ -245,16 +245,14 @@ MpCmdRun.exe -SignatureUpdate
 
 ### Standalone Executable (Windows x64)
 
-Download the latest pre-built standalone release bundle:
+Download the latest Windows installer from the **Orbix-Windows-x64** artifact attached to the latest successful [Windows build](https://github.com/pardhusaipatchipulusu-sys/window-s-ui/actions/workflows/build-windows.yml).
 
-- **[Latest Release: Orbix v0.1.0 (Beta)](https://github.com/Lukog10/Orbix/releases/tag/v0.1.0)**
-- **[Direct Download: Orbix-v0.1.0-beta-windows-x64.zip](https://github.com/Lukog10/Orbix/releases/download/v0.1.0/Orbix-v0.1.0-beta-windows-x64.zip)**
-- **[Direct Download: Standalone Orbix.exe](https://github.com/Lukog10/Orbix/releases/download/v0.1.0/Orbix.exe)**
+Open the build run and download its **Orbix-Windows-x64** artifact. It contains the NSIS `.exe` installer and MSI installer.
 
 #### Quick Installation
-1. Download `Orbix-v0.1.0-beta-windows-x64.zip` or `Orbix.exe` from the release links above.
-2. If using the ZIP, extract it to your preferred location (e.g. `C:\Program Files\Orbix` or your user folder).
-3. Double-click **`Orbix.exe`** to launch immediately. No installer, third-party runtimes, or administrative privileges are required.
+1. Download the **Orbix-Windows-x64** artifact and extract its ZIP.
+2. Run the `.exe` or `.msi` installer inside.
+3. Follow the installer prompts to install Orbix.
 4. *(Optional)* Enable **Launch at Startup** in Orbix Settings to have your dock and notch start automatically with Windows.
 
 ---
@@ -285,7 +283,7 @@ bun run tauri dev
 
 # 5. Build optimized standalone production release
 bun run build
-bun run tauri build
+bun run tauri build --config src-tauri/tauri.ci.conf.json
 ```
 
 The resulting standalone executable will be located at:
@@ -340,4 +338,3 @@ Orbix is licensed under the **[GNU General Public License v3.0 (GPLv3)](LICENSE)
 **Orbix &bull; Next-generation desktop dynamics for Windows.**
 
 </div>
-

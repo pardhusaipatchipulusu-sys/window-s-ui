@@ -1,0 +1,17 @@
+.lyrics-view{position:relative;width:100%;height:250px;box-sizing:border-box;padding:10px 15px 8px;display:flex;flex-direction:column;gap:8px;color:var(--bloom-text,#fff);background:color-mix(in srgb,var(--bloom-bg-expanded,rgba(0,0,0,.92)) 92%,transparent);border-radius:0 0 18px 18px;backdrop-filter:blur(20px);overflow:hidden}
+.lyrics-header{height:34px;flex:none;display:flex;align-items:center;gap:9px}
+.lyrics-back{width:28px;height:28px;display:grid;place-items:center;flex:none;border:1px solid var(--bloom-border,rgba(255,255,255,.12));border-radius:9px;background:rgba(255,255,255,.045);color:var(--bloom-text-muted,rgba(255,255,255,.72));cursor:pointer}
+.lyrics-back:hover{background:rgba(255,255,255,.1);color:var(--bloom-text,#fff)}
+.lyrics-heading{display:flex;align-items:center;gap:8px;min-width:0;flex:1}
+.lyrics-heading>span{width:27px;height:27px;display:grid;place-items:center;border:1px solid color-mix(in srgb,var(--bloom-accent,#9b85d5) 35%,transparent);border-radius:8px;background:color-mix(in srgb,var(--bloom-accent,#9b85d5) 15%,transparent);color:var(--bloom-accent,#bba6ed)}
+.lyrics-heading>div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.lyrics-heading strong{font-size:12px;font-weight:650}
+.lyrics-heading small{max-width:270px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:10px;color:var(--bloom-text-muted,rgba(255,255,255,.56))}
+.lyrics-sync-label{padding:4px 6px;border:1px solid var(--bloom-border,rgba(255,255,255,.1));border-radius:6px;color:var(--bloom-text-muted,rgba(255,255,255,.52));font-size:8px;font-weight:700;letter-spacing:.08em}
+.lyrics-scroll{min-height:0;flex:1;overflow:auto;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.18) transparent;padding:0 10px 2px 37px;mask-image:linear-gradient(to bottom,transparent,black 7%,black 93%,transparent)}
+.lyrics-line{padding:4px 0;color:var(--bloom-text-muted,rgba(255,255,255,.48));font-size:13px;line-height:1.4;font-weight:550;transition:color .2s,transform .2s}
+.lyrics-line.active{color:var(--bloom-text,#fff);transform:translateX(3px);text-shadow:0 0 18px color-mix(in srgb,var(--bloom-accent,#9b85d5) 40%,transparent)}
+.lyrics-state{height:100%;display:flex;align-items:center;justify-content:center;gap:8px;color:var(--bloom-text-muted,rgba(255,255,255,.65));font-size:12px;text-align:center}
+.lyrics-spinner{animation:lyrics-spin .9s linear infinite;color:var(--bloom-accent,#bba6ed)}
+.lyrics-footer{flex:none;padding-top:5px;border-top:1px solid var(--bloom-border,rgba(255,255,255,.08));color:var(--bloom-text-muted,rgba(255,255,255,.38));font-size:9px;text-align:right}
+@keyframes lyrics-spin{to{transform:rotate(360deg)}}
