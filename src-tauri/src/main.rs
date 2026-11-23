@@ -181,7 +181,7 @@ fn main() {
             downloader::get_download_jobs,
             downloader::queue_download,
             downloader::open_download_folder,
-            set_keep_awake,
+			commands::set_keep_awake,
             get_keep_awake,
             lock_workstation,
             set_wifi_state,

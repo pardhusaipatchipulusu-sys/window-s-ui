@@ -3352,7 +3352,7 @@ pub async fn get_bluetooth_state() -> Result<bool, String> {
     .map_err(|e| e.to_string())?
 }
 
-#[derive(serde::Serialize)]
+#[derive(serde::Serialize, serde::Deserialize)]
 pub struct BluetoothBatteryInfo {
     device_name: String,
     battery_level: u8,
@@ -5110,7 +5110,7 @@ fn capture_virtual_desktop_to_screenshots(app: &AppHandle) -> Result<String, Str
             origin_y,
             SRCCOPY,
         )
-        .as_bool();
+		.is_ok();
         SelectObject(memory_dc, previous);
 
         let mut info = BITMAPINFO {
